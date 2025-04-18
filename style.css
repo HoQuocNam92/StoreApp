@@ -1,0 +1,574 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Winky Rough", sans-serif;
+
+}
+
+
+
+
+
+
+
+
+
+/* Header */
+
+
+#header {
+    position: fixed;
+    height: 90px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2993fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#header .header-section {
+    width: 1200px;
+    max-width: 100%;
+    padding: 0 15px;
+
+}
+
+.header-section .heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 235px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    width: 600px;
+    padding: 10px 15px;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid transparent;
+}
+
+.search button {
+    background-color: rgb(255, 245, 14);
+    padding: 11px;
+    border: none;
+    cursor: pointer;
+    margin-left: -108px;
+}
+
+.search button a {
+    color: rgb(10, 10, 10);
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.search button a:hover {
+    opacity: 0.6;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.info i {
+    font-size: 24px;
+    margin-right: -24px;
+    padding-left: 14px;
+}
+
+
+
+
+
+
+
+/* menu-item */
+
+
+.main-menu {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(10, 10, 10, 0.4);
+    top: 100%;
+    z-index: 99;
+}
+
+.menu-section {
+    display: flex;
+}
+
+
+
+.menu-section .icons-down {
+    font-size: 12px;
+}
+
+.menu-section .icons-bar {
+    font-size: 22px;
+}
+
+
+
+.menu-section .menu-item {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-left: 24px;
+}
+
+.menu-section .link-menu {
+    text-decoration: none;
+    color: rgb(41, 147, 252);
+    display: block;
+    padding: 4px 10px;
+    font-weight: bold;
+    border-radius: 99px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.menu-section .selected {
+    background-color: rgb(41, 147, 252);
+    color: #fff
+}
+
+.menu-section .link-menu:hover {
+    background-color: rgb(41, 147, 252);
+    color: #fff
+}
+
+
+
+
+
+
+/* Drop down */
+
+.menu-section .dropdown-menu {
+    display: flex;
+    align-items: center;
+    background-color: rgb(41, 147, 252);
+    color: #fff;
+    padding: 12px 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    min-width: 272px;
+}
+
+.dropdown-menu>i {
+    padding: 0 12px;
+}
+
+.dropdown-item>li>a>i {
+    padding-left: 4px;
+    text-align: right;
+    flex: 1;
+}
+
+.dropdown-item img {
+    width: 25px;
+    margin-right: 8px;
+}
+
+
+
+
+.dropdown-item {
+    position: absolute;
+    color: #000;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background: #fff;
+    box-shadow: 0 1px 8px rgba(206, 199, 199, 0.83);
+    transition: all 0.3s ease-in-out;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.dropdown-item>li>a i {
+    font-size: 12px;
+    float: right;
+    line-height: 21px;
+}
+
+.dropdown-item>li {
+    border-bottom: 1px solid #ccc;
+}
+
+.dropdown-item .link-item {
+    text-decoration: none;
+    color: rgba(102, 102, 102, 0.85);
+    padding: 10px 12px;
+    transition: color 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.dropdown-item .link-item:hover {
+    color: #000;
+}
+
+
+.main-menu .dropdown-menu:hover .dropdown-item {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.main-menu:hover~.overlay {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Overlay */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    top: 90px;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 19;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sub Tivi */
+
+.dropdown-item .subItem {
+    position: absolute;
+    inset: 0 0 0 268px;
+    width: 880px;
+    z-index: 9999;
+    background-color: #fff;
+    box-shadow: 0px 0 4px rgba(206, 199, 199, 0.83);
+    margin-left: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.subItem li {
+    list-style: none;
+    display: flex;
+    margin-left: 14px;
+
+}
+
+.subItem li ul {
+    width: 250px;
+    padding: 8px;
+}
+
+.subItem li ul li {
+    border-bottom: 1px solid #ccc;
+}
+
+.subItem li a {
+    text-decoration: none;
+    color: rgba(102, 102, 102, 0.85);
+    padding: 8px 0;
+}
+
+.subItem li i {
+    font-size: 12px
+}
+
+
+
+.subItem li ul li a {
+    transition: all 0.2s ease-in-out;
+
+}
+
+.subItem li ul li:hover a {
+    color: #000
+}
+
+.dropdown-item .tivi:hover .subTivi {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* subFridge */
+
+
+
+.dropdown-item .fridge:hover .subFridge {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Conditioner */
+
+
+
+
+
+.dropdown-item .conditioner:hover .subConditioner {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Machine */
+
+
+.dropdown-item .machine:hover .subMachine {
+    visibility: visible;
+    opacity: 1;
+}
+
+.subImage ul {
+    display: flex;
+}
+
+.subImage li ul {
+    width: 50% !important;
+}
+
+.subImage li {
+    margin: 0 !important;
+}
+
+.subImage li ul img {
+    width: 200px;
+    height: auto;
+}
+
+
+
+
+
+
+/* Badge */
+
+.hotBadge {
+    background-color: #b20000;
+
+
+}
+
+.popularBadge {
+
+    background-color: #7a9c59
+}
+
+.newBadge {
+    background-color: #4a90e2;
+}
+
+.saleBadge {
+    background-color: #d26e4b;
+
+}
+
+:is(.hotBadge, .popularBadge, .newBadge, .saleBadge) {
+    color: #fff;
+    padding: 1px;
+    border-radius: 2px;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Water */
+
+
+.dropdown-item .water:hover .subWater {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Household  */
+
+
+
+.dropdown-item .household:hover .subHousehold {
+    visibility: visible;
+    opacity: 1;
+}
+
+.subHousehold h3 {
+    color: #000 !important;
+}
+
+.subHousehold img {
+    width: 200px;
+    height: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Beautiful */
+
+
+.dropdown-item .beautiful:hover .subBeautiful {
+    visibility: visible;
+    opacity: 1;
+}
+
+.subBeautiful h3 {
+    color: #000 !important;
+}
