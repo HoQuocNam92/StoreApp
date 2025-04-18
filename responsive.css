@@ -71,7 +71,7 @@
     }
 
     .search button {
-        transform: translate(220px, -36px);
+        transform: translate(220px, -36px) !important;
     }
 
 
