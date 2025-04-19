@@ -833,9 +833,9 @@ body {
 
 
 
-/* List guarantee */
+/* List warranty */
 
-.list-guarantee {
+.list-warranty {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
